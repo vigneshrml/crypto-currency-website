@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <!-- ===============================================-->
+    <!--    Document Title-->
+    <!-- ===============================================-->
+    <title>Cryptrich - World's first pool trading system</title>
+    <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <meta name="msapplication-TileImage" content="/img/favicons/mstile-150x150.png">
+    <meta name="theme-color" content="#ffffff">
+
+
+    <!-- ===============================================-->
+    <!--    Stylesheets-->
+    <!-- ===============================================-->
+    <link href="/css/theme.css" rel="stylesheet" />
+
+  </head>
+
+
+  <body>
+
+    <!-- ===============================================-->
+    <!--    Main Content-->
+    <!-- ===============================================-->
+    
+    <main class="main" id="top">
+      <%- include("./partials/header.ejs") %> 
+      
+      <!-- ============================================-->
+      <!-- <section> begin ============================-->
+      <section class="py-7" id="login">
+
+        <div class="container-lg mt-4">
+          <div class="row h-100 justify-content-center">
+            <div class="col-11 col-md-5 pt-2 px-md-2 px-lg-3">
+              <div class="card">
+                <div class="card-body d-flex flex-column justify-content-around mx-1">
+                  <div class="text-center">
+                    <h2 class="my-3">Login</h2>
+                  </div>
+                  <div class="text-center pt-0">
+                    <img src="/img/bit11.png" class="mt-2 mb-4 img-fluid" width="60">
+                    <img src="/img/2.png" class="mt-2 mb-4 img-fluid" width="60">
+                    <img src="/img/3.png" class="mt-2 mb-4 img-fluid" width="60">
+                    <img src="/img/4.png" class="mt-2 mb-4 img-fluid" width="60">
+                  </div>
+                  <% if(message.error){ %>
+                     <div class="alert alert-danger text-center">
+                       <%= message.error %> 
+                     </div>
+                    <% } %>  
+                  <form action="/login" method="POST">
+                    <div class="mb-3">
+                        <input type="email" name="username" class="form-control" placeholder="Email" required>
+                      </div>
+                      <div class="mb-3">
+                        <input type="password" name="password" class="form-control" placeholder="Password" required>
+                      </div>
+                      <div class="text-center">
+                        <button class="btn btn-gray text-light rounded-pill border-0" type="submit">LOGIN</button>
+                      </div>
+                  </form>
+                  <a href="" class="text-dark my-3 text-center">Please don't forget login Informations.</a>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+        <!-- end of .container-->
+
+      </section>
+      <%- include("./partials/footer.ejs") %> 
+    </main>
+    <script src="/vendors/@popperjs/popper.min.js"></script>
+    <script src="/vendors/bootstrap/bootstrap.min.js"></script>
+    <script src="/vendors/is/is.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
+    <script src="/js/theme.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
+  </body>
+
+</html>

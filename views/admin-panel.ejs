@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <!-- ===============================================-->
+    <!--    Document Title-->
+    <!-- ===============================================-->
+    <title>Cryptrich - World's first pool trading system</title>
+    <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <meta name="msapplication-TileImage" content="/img/favicons/mstile-150x150.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- ===============================================-->
+    <!--    Stylesheets-->
+    <!-- ===============================================-->
+    <link href="/css/theme.css" rel="stylesheet" />
+
+  </head>
+
+
+  <body>
+
+    
+    <main class="main" id="top">
+      
+      <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-3" style="background-color: #1F2641;">
+        <div class="container"><a class="navbar-brand" href="/"><img src="/img/icon.png" alt="" width="240"></a>
+          <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto border-bottom border-lg-bottom-0 pt-2 pt-lg-0">
+              <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="/admin-panel">Polls</a></li>
+              <li class="nav-item"><a class="nav-link" href="/admin-user">Users</a></li>
+            </ul>
+            <form class="d-flex py-3 py-lg-0">
+              <% if(!currentUser){ %>
+                <a href="/login" class="btn btn-gray text-light rounded-pill order-0">LOGIN</a>
+                <% }else{ %>
+                  <a href="/profile" class="btn btn-gray text-light rounded-pill order-0">PROFILE</a>&nbsp;
+                  <a href="/logout" class="btn btn-gray text-light rounded-pill order-0">LOGOUT</a>
+                  <% } %> 
+            </form>
+          </div>
+        </div>
+      </nav>
+      
+
+
+<!-- ============================================-->
+      <!-- <section> begin ============================-->
+        <section class="py-7" id="bag">
+
+          <div class="container-lg mt-5 mt-md-4">
+            <div class="row justify-content-center">
+              <div class="col-md-12 text-center mb-3">
+                  <img src="https://davhizrhxzcu1.cloudfront.net/assets/media_kit/logo_blue-0a5ceed1257be54ad73861d21767f5c202bcf72d9b15e437d308655a24250702.png" class="mt-0 mb-2 mb-md-4 img-fluid" width="170">
+                <h2 class="text-light">Edit the polls</h2>
+               </div>
+            </div>
+          </div>
+          <div class="container">
+              
+              <div class="row">
+                      <div class="col-md-12">
+                        <div class="panel-heading mb-4">
+                          <div class="dropdown rounded">
+                            <button class="btn btn-danger pull-right" data-bs-toggle="modal" data-bs-target="#exampleModal">Create</button>
+                          </div>
+                        </div>
+                          <!-- Table -->
+                        <table id="mytable" class="table table-responsive">
+                          <thead class="text-light">
+                            <tr>
+                            <th>Pool</th>
+                             <th>Plan</th>
+                             <th>Change Date</th>
+                            <th style="width:25%">Progress</th>
+                            <th>Status</th>
+                            </tr>
+                          </thead>
+                          <tbody class="text-secondary">
+                            <% poll.forEach(function(poll){ %>
+                              <tr>
+                                <td><%=poll.pool %> </td>
+                                <td><%=poll.plan %> </td>
+                                <td><%=poll.createdAt.toDateString() %> </td>
+                                <td>
+                                  <div class="progress">
+                                    <div style="width: <%=poll.percent %>%;" aria-valuemax="100" aria-valuemin="0" aria-valuenow="<%=poll.percent %>" role="progressbar" class="progress-bar bar-gray">
+                                    <span><%=poll.percent %>%</span>
+                                     </div>
+                                  </div>
+                                </td>
+                                <td><a href="/editpoll/<%=poll.id %>" class="btn btn-sm btn-gray text-light"><i class="fas fa-edit"></i></a></td>
+                                </tr>
+                              <% }) %>  
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+          </div>
+          
+          <!-- end of .container-->
+  
+        </section>
+        <!-- Button trigger modal -->
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">New pool</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form action="/newpoll" method="POST">
+          <div class="mb-3">
+            <select class="form-select" aria-label="Default select example" name="pool" required>
+              <option selected>POOL</option>
+              <option>BITCOIN</option>
+              <option>ETHEREUM</option>
+              <option>LITECOIN</option>
+              <option>TRON</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <select class="form-select" aria-label="Default select example" name="plan" required>
+              <option selected>PLAN</option>
+              <option>A</option>
+              <option>B</option>
+              <option>C</option>
+              <option>FRONT</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Percentage" name="percent" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Create Poll</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+     
+
+<%- include("./partials/footer.ejs") %> 
+
+    </main>
+    <!-- ===============================================-->
+    <!--    End of Main Content-->
+    <!-- ===============================================-->
+
+
+
+
+    <!-- ===============================================-->
+    <!--    JavaScripts-->
+    <!-- ===============================================-->
+    <script src="/vendors/@popperjs/popper.min.js"></script>
+    <script src="/vendors/bootstrap/bootstrap.min.js"></script>
+    <script src="/vendors/is/is.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
+    <script src="/js/theme.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
+  </body>
+
+</html>
