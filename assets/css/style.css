@@ -57,6 +57,25 @@
     background: linear-gradient(83deg, rgba(243,206,98,1) 0%, rgba(220,185,83,1) 50%, rgba(189,156,61,1) 100%);
 }
 
+.logo-image{
+    width: 240px;
+}
+
+@media screen and (max-width:600px) {
+    .logo-image{
+        width: 180px;
+    }
+    .dollar-stu{
+        float: right;
+        background-color: white;
+        color: #1762E4;
+        border-radius: 15px;
+        padding: 0px 13px;
+        font-size: 13px;
+    }
+    
+}
+
 .progress{
     border: 1px solid rgb(237,136,77);
     
@@ -68,6 +87,9 @@
 .mb-3 .form-control:focus{
     box-shadow: none;
     border: 2px solid #F53838;
+}
+.text-ins:hover{
+    text-decoration: none;
 }
 
 .mb-3 #bg-blur-dark{
