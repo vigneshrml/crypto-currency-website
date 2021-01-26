@@ -73,6 +73,9 @@
         padding: 0px 13px;
         font-size: 13px;
     }
+    body::-webkit-scrollbar{
+        display: none;
+    }
     
 }
 
