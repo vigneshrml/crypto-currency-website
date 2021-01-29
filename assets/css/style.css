@@ -9,6 +9,17 @@
 .dollar{
     float: right;
 }
+.fa-facebook,.fa-youtube,.fa-twitter,.fa-instagram{
+    color: #d0d0d0;
+    font-size: 22px;
+    padding-right: 9.5px;
+}
+.fa-facebook:hover,.fa-youtube:hover,.fa-twitter:hover,.fa-instagram:hover{
+    color:  rgb(237,136,77);
+    font-size: 22px;
+    padding-right: 9.5px;
+}
+
 .dollar-stu{
     float: right;
     background-color: white;
@@ -33,9 +44,21 @@
     padding-top: 2px;
     padding-bottom: 2px;
 }
-.gray-color{
+.bd-down{
+    border-bottom: 0.4px solid #d0d0d0;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+ .gray-color{
     color:  rgb(243,206,98);
 }
+.accordion{
+    border-radius: 15px;
+    font-size: small;
+}
+
+
 .green-color{
     color: rgb(243,206,98);
 }
@@ -76,6 +99,13 @@
     body::-webkit-scrollbar{
         display: none;
     }
+    .bd-down{
+        border-bottom: 0.4px solid #d0d0d0;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        font-size: 13.5px;
+    }
+    
     
 }
 
@@ -85,6 +115,13 @@
 }
 .bar-gray{
     border-radius: 5px;
+}
+.sponser-name{
+    background-color: #df0139;
+    border-radius: 10px;
+    color: white;
+    font-size: 13px;
+    padding: 2px 7px;
 }
 
 .mb-3 .form-control:focus{
@@ -203,3 +240,45 @@ background: linear-gradient(113deg, rgba(3,218,246,1) 0%, rgba(15,145,235,1) 50%
 }
      
      
+#countdown{
+    background: rgb(20,27,53);
+    background: linear-gradient(113deg, rgba(20,27,53,1) 0%, rgba(16,29,77,1) 50%, rgba(0,42,147,1) 100%);
+    width: fit-content;
+    border-radius: 20px;
+    padding: 20px;
+    border: 2.5px solid rgb(243,206,98);
+}
+
+.responsive-iframe {
+    width: 100%;
+    height: 350px;
+    border: 5px outset rgb(243,206,98);
+  }
+
+#makers-hub{
+    display: flex;
+    margin-top: 30px;
+}
+#makers-hub li{ 
+    color: white;
+    font-weight:400;
+    font-size: 12px;
+}
+
+#days,#hours,#minutes,#seconds{
+    background-color: white;
+    padding:15px 15px;
+    margin-right:5px;
+    margin-left: 5px;
+    border-radius: 15px;
+    line-height: 80px;
+    font-weight: 600;
+    font-size: 25px;
+    color: rgb(28, 28, 28);
+}
+
+.btn-new{
+    border-radius: 20px;
+    background: rgb(0,135,204);
+    background: linear-gradient(113deg, rgba(0,135,204,1) 0%, rgba(0,149,225,1) 50%, rgba(0,168,253,1) 100%);
+}

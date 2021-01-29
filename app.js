@@ -61,7 +61,7 @@ var port = process.env.PORT || 9900;
         }
       });
     });
-    app.get("/bitcoin",isLoggedIn,function(req,res){
+    app.get("/bitcoin",function(req,res){
       Pool.find({},function(err,poll){
         if(err){
           console.log(err);
@@ -70,7 +70,7 @@ var port = process.env.PORT || 9900;
         }
       });
    });
-   app.get("/ethereum",isLoggedIn,function(req,res){
+   app.get("/ethereum",function(req,res){
     Pool.find({},function(err,poll){
       if(err){
         console.log(err);
@@ -79,7 +79,7 @@ var port = process.env.PORT || 9900;
       }
     });
  });
- app.get("/litecoin",isLoggedIn,function(req,res){
+ app.get("/litecoin",function(req,res){
   Pool.find({},function(err,poll){
     if(err){
       console.log(err);
@@ -88,7 +88,7 @@ var port = process.env.PORT || 9900;
     }
   });
 });
-app.get("/tron",isLoggedIn,function(req,res){
+app.get("/tron",function(req,res){
   Pool.find({},function(err,poll){
     if(err){
       console.log(err);
@@ -108,6 +108,9 @@ app.get("/tron",isLoggedIn,function(req,res){
       });
       app.get("/notfound",function(req,res){
         res.render("notfound");
+      });
+       app.get("/register",function(req,res){
+        res.render("new");
       });
       app.get("/referral/:id",function(req,res){
         User.findById(req.params.id,function(err,user){
@@ -213,6 +216,7 @@ app.get("/tron",isLoggedIn,function(req,res){
             //! Registration Side
             app.post("/register",function(req,res){
               var newobj = {
+                  name        : req.body.name,
                   sponsor     : req.body.sponsor,
                   username    : req.body.username
                 };

@@ -70,7 +70,12 @@ tr td:first-child:before
                         <img class="mb-3 shadow-sm mt-1 img-fluid" style="border-radius: 50%;" src="/img/avatar.png" width="100">
                            <div class="">
                              <h6 class="mb-2">_Sponsored By_</h6>
-                               <p class="mb-1 small fw-bold"><%=currentUser.sponsor.substring(0,12) %></p>
+                               <p class="mb-1 small fw-bold">
+                                 <%if(currentUser.sponsor){%><%=currentUser.sponsor.substring(0,12)%>
+                                  <% }else{ %>
+                                    none
+                                    <% } %> 
+                                </p>
                                 <p><%=currentUser.username %></p>
                                 <a class="btn btn-gray btn-sm text-light rounded-pill border-0" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Edit My Id</a>
                             </div>

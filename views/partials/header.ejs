@@ -12,10 +12,11 @@
         </ul>
         <form class="d-flex py-3 py-lg-0">
           <% if(!currentUser){ %>
-            <a href="/login" class="btn btn-gray text-light rounded-pill order-0">LOGIN</a>
+            <a href="/register" class="btn btn-sm btn-gray text-light me-2">Register</a>
+            <a href="/login" class="btn btn-sm btn-gray text-light">Login</a>
             <% }else{ %>
-              <a href="/profile" class="btn btn-gray text-light rounded-pill order-0">PROFILE</a>&nbsp;
-              <a href="/logout" class="btn btn-gray text-light rounded-pill order-0">LOGOUT</a>
+              <a href="/profile" class="btn btn-sm btn-gray text-light">Profile</a>&nbsp;
+              <a href="/logout" class="btn btn-sm btn-gray text-light">Logout</a>
               <% } %>   
         </form>
       </div>

@@ -73,7 +73,11 @@
                     <% })  %>  
                   <div class="text-center">
                     <p class="mb-2"></p>
-                    <a class="btn btn-gray text-light rounded-pill border-0" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">DEPOSIT</a>
+                   <% if(!currentUser){ %>
+                      <a href="/login" class="btn btn-gray text-light rounded-pill border-0">DEPOSIT</a>
+                      <% }else{ %>
+                        <a class="btn btn-gray text-light rounded-pill border-0" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">DEPOSIT</a>
+                        <% } %> 
                   </div>
                 </div>
               </div>
@@ -100,7 +104,11 @@
                    <% })  %> 
                   <div class="text-center">
                     <p class="mb-2"></p>
-                    <a class="btn btn-gray text-light rounded-pill border-0" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal2">DEPOSIT</a>
+                    <% if(!currentUser){ %>
+                      <a href="/login" class="btn btn-gray text-light rounded-pill border-0">DEPOSIT</a>
+                      <% }else{ %>
+                        <a class="btn btn-gray text-light rounded-pill border-0" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal2">DEPOSIT</a>
+                        <% } %> 
                   </div>
                 </div>
               </div>
@@ -127,7 +135,11 @@
                    <% })  %> 
                   <div class="text-center">
                     <p class="mb-2"></p>
-                    <a class="btn btn-gray text-light rounded-pill border-0" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal3">DEPOSIT</a>
+                    <% if(!currentUser){ %>
+                      <a href="/login" class="btn btn-gray text-light rounded-pill border-0">DEPOSIT</a>
+                      <% }else{ %>
+                        <a class="btn btn-gray text-light rounded-pill border-0" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal3">DEPOSIT</a>
+                        <% } %> 
                   </div>
                 </div>
               </div>

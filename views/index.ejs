@@ -49,7 +49,7 @@
         <div class="container">
           <marquee behavior="" direction="" scrollamount="5" style="background-color: #1D2330;">
             <p class="text-light fs--1 pt-2" style="height: auto;">
-              <span class="gray-color">Cryptrich</span> is Sponsored By The World's Popular Crypto Trading And Exchanges.
+              <img src="/img/new.gif"> <span class="gray-color">Cryptrich</span> is Sponsored By The World's Popular Crypto Trading And Exchanges.
               <span class="gray-color">(Binance, Bitfinex, Dapp, Bingbon, Trust Crypto Wallet)</span>
               Build By Higher And Powerful Blockchain Developers
               Invest And Get Back Your Returns Once The Pool Ends. We Offer Various Plans 
@@ -57,15 +57,29 @@
             </p>
           </marquee>
           <div class="row flex-center mt-4 align-items-center" data-aos="zoom-in">
-            <div class="col-md-5 col-lg-6 order-1 order-md-1 text-center d-none d-md-block">
+            <!--!!Timer block-->
+            <!-- <div class="col-md-5 col-lg-6 order-0 order-md-1 text-center mb-4">
+                <div class="mx-auto my-auto" id="countdown">
+                  <h3 class="text-light">Limited Offer</h3>
+                  <ul class="list-unstyled" id="makers-hub">
+                    <li><span id="days"></span><br>days</li>
+                    <li><span id="hours"></span><br>hours</li>
+                    <li><span id="minutes"></span><br>minutes</li>
+                    <li><span id="seconds"></span><br>seconds</li>
+                  </ul>
+                  <a href="/register" class="btn btn-new rounded-pill text-light me-2">Start Deposit</a>
+                </div>
+            </div> -->
+            <!--!!Timer block-->
+             <div class="col-md-5 col-lg-6 order-1 order-md-1 text-center d-none d-md-block">
               <img class="img-fluid mt-5 mb-3 my-md-0" id="img" src="/img/second.png" alt="" width="600">
-            </div>
+            </div> 
             <div class="col-md-7 col-lg-6 mt-4 mt-md-0 px-2 order-0 text-center text-md-start">
               <h1 class="fw-lighter text-light"><span class="fw-medium">CRYPTRICH</span> World's First Automatic Pool Trading System.</h1>
               <p class="mt-3 mb-4 text-secondary">
                 The champions are not the ones who always win the tournament. 
-The heroes are the ones who go out and try. And the next time they try harder. 
-And the next time they try even harder . Invest today to succeed tomorrow.
+                The heroes are the ones who go out and try. And the next time they try harder. 
+                And the next time they try even harder . Invest today to succeed tomorrow.
               </p>
               <a href="#pricing" class="btn btn-lg btn-gray text-light" href="#">Get Started </a>
             </div>
@@ -164,6 +178,19 @@ And the next time they try even harder . Invest today to succeed tomorrow.
       <!-- <section> close ============================-->
       <!-- ============================================-->
 
+      <section class="pt-4 py-md-2 pb-md-4">
+
+        <div class="container">
+          <div class="row justify-content-center align-items-center">
+            <div class="col-md-7 text-center">
+              <iframe class="responsive-iframe" src="https://www.youtube.com/embed/oVnPqtYPH58" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+        <!-- end of .container-->
+
+      </section>
+
       <!-- ============================================-->
       <!-- <section> begin ============================-->
       <section class="py-4" id="pricing">
@@ -184,11 +211,7 @@ And the next time they try even harder . Invest today to succeed tomorrow.
                   </div>
                   <div class="text-center">
                     <p class="mb-2"><small>Upto 200% Return</small></p>
-                    <% if(!currentUser){ %>
-                      <a href="/login" class="btn btn-gray btn-sm text-light rounded-pill border-0">DEPOSIT</a>
-                      <% }else{ %>
                         <a href="/bitcoin" class="btn btn-gray btn-sm text-light rounded-pill border-0">DEPOSIT</a>
-                        <% } %>
                   </div>
                 </div>
               </div>
@@ -201,11 +224,7 @@ And the next time they try even harder . Invest today to succeed tomorrow.
                   </div>
                   <div class="text-center">
                     <p class="mb-2"><small>Upto 200% Return</small></p>
-                    <% if(!currentUser){ %>
-                      <a href="/login" class="btn btn-gray btn-sm text-light rounded-pill border-0">DEPOSIT</a>
-                      <% }else{ %>
                         <a href="/ethereum" class="btn btn-gray btn-sm text-light rounded-pill border-0">DEPOSIT</a>
-                        <% } %>   
                   </div>
                 </div>
               </div>
@@ -218,11 +237,7 @@ And the next time they try even harder . Invest today to succeed tomorrow.
                   </div>
                   <div class="text-center">
                     <p class="mb-2"><small>Upto 200% Return</small></p>
-                    <% if(!currentUser){ %>
-                      <a href="/login" class="btn btn-gray btn-sm text-light rounded-pill border-0">DEPOSIT</a>
-                      <% }else{ %>
                         <a href="/litecoin" class="btn btn-gray btn-sm text-light rounded-pill border-0">DEPOSIT</a>
-                        <% } %>
                   </div>
                 </div>
               </div>
@@ -235,11 +250,7 @@ And the next time they try even harder . Invest today to succeed tomorrow.
                   </div>
                   <div class="text-center">
                     <p class="mb-2"><small>Upto 200% Return</small></p>
-                    <% if(!currentUser){ %>
-                      <a href="/login" class="btn btn-gray btn-sm text-light rounded-pill border-0">DEPOSIT</a>
-                      <% }else{ %>
                         <a href="/tron" class="btn btn-gray btn-sm text-light rounded-pill border-0">DEPOSIT</a>
-                        <% } %>
                   </div>
                 </div>
               </div>
@@ -476,11 +487,11 @@ And the next time they try even harder . Invest today to succeed tomorrow.
                     </div>
                     <div class="text-center">
                       <ul class="list-unstyled text-start">
-                        <li class="mb-2 bd">Plan A:<span class="dollar-stu">1 <small>Btc</small></span>
+                        <li class="mb-2 bd-down">Plan A:<span class="dollar-stu">1 <small>Btc</small></span>
                         </li>
-                        <li class="mb-2 bd">Plan B:<span class="dollar-stu">2 <small>Btc</small></span>
+                        <li class="mb-2 bd-down">Plan B:<span class="dollar-stu">2 <small>Btc</small></span>
                         </li>
-                        <li class="mb-2 bd">Plan C:<span class="dollar-stu">3 <small>Btc</small></span>
+                        <li class="mb-2 bd-down">Plan C:<span class="dollar-stu">3 <small>Btc</small></span>
                         </li>
                       </ul>
                     </div>
@@ -497,11 +508,11 @@ And the next time they try even harder . Invest today to succeed tomorrow.
                   </div>
                   <div class="text-center">
                     <ul class="list-unstyled text-start">
-                      <li class="mb-2 bd">Plan A:<span class="dollar-stu">2 <small>Eth</small></span>
+                      <li class="mb-2 bd-down">Plan A:<span class="dollar-stu">2 <small>Eth</small></span>
                       </li>
-                      <li class="mb-2 bd">Plan B:<span class="dollar-stu">4 <small>Eth</small></span>
+                      <li class="mb-2 bd-down">Plan B:<span class="dollar-stu">4 <small>Eth</small></span>
                       </li>
-                      <li class="mb-2 bd">Plan C:<span class="dollar-stu">8 <small>Eth</small></span>
+                      <li class="mb-2 bd-down">Plan C:<span class="dollar-stu">8 <small>Eth</small></span>
                       </li>
                     </ul>  
                   </div>
@@ -518,11 +529,11 @@ And the next time they try even harder . Invest today to succeed tomorrow.
                   </div>
                   <div class="text-center">
                     <ul class="list-unstyled text-start">
-                      <li class="mb-2 bd">Plan A:<span class="dollar-stu">4 <small>Ltc</small></span>
+                      <li class="mb-2 bd-down">Plan A:<span class="dollar-stu">4 <small>Ltc</small></span>
                       </li>
-                      <li class="mb-2 bd">Plan B:<span class="dollar-stu">6 <small>Ltc</small></span>
+                      <li class="mb-2 bd-down">Plan B:<span class="dollar-stu">6 <small>Ltc</small></span>
                       </li>
-                      <li class="mb-2 bd">Plan C:<span class="dollar-stu">8 <small>Ltc</small></span>
+                      <li class="mb-2 bd-down">Plan C:<span class="dollar-stu">8 <small>Ltc</small></span>
                       </li>
                     </ul> 
                   </div>
@@ -539,11 +550,11 @@ And the next time they try even harder . Invest today to succeed tomorrow.
                   </div>
                   <div class="text-center">
                     <ul class="list-unstyled text-start">
-                      <li class="mb-2 bd">Plan A:<span class="dollar-stu">100K <small>Trx</small></span>
+                      <li class="mb-2 bd-down">Plan A:<span class="dollar-stu">100K <small>Trx</small></span>
                       </li>
-                      <li class="mb-2 bd">Plan B:<span class="dollar-stu">200K <small>Trx</small></span>
+                      <li class="mb-2 bd-down">Plan B:<span class="dollar-stu">200K <small>Trx</small></span>
                       </li>
-                      <li class="mb-2 bd">Plan C:<span class="dollar-stu">400K <small>Trx</small></span>
+                      <li class="mb-2 bd-down">Plan C:<span class="dollar-stu">400K <small>Trx</small></span>
                       </li>
                     </ul> 
                   </div>
@@ -555,6 +566,111 @@ And the next time they try even harder . Invest today to succeed tomorrow.
         </div>
         <!-- end of .container-->
 
+      </section>
+
+      <section class="pt-3 pb-5">
+        <div class="container-lg">
+          <div class="row justify-content-center">
+            <div class="col-md-12 text-center mb-3">
+              <h2 class="gray-color">FAQ</h2>
+              <p class="text-secondary">Questions by people to us.</p>
+            </div>
+          </div>
+          <div class="row justify-content-center align-content-center">
+            <div class="col-12 col-md-9">
+              <div class="accordion bg-soft-primary" id="accordionExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button collapsed fs--1" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      1. What is Cryptrich?
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <p class="text-dark">
+                        CRYPTRICH is World's First Automatic Pool Trading System. Cryptrich is made by powerful and higher Blockchain developers.
+                        Cryptrich is fully automated platform where you can invest and get back your returns once pool ends.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed fs--1" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      2. Who is Cryptrich's official sponsors?
+                    </button>
+                  </h2>
+                  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <p class="text-dark">Binance, Bitfinex, Dapp, Bingbon, Trust Crypto Wallet.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed fs--1" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      3.  How do you Earn?
+                    </button>
+                  </h2>
+                  <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <p class="text-dark">
+                        Cryptrich offers Three types of Plans(A,B & C) with Three types of pools respectively. Once you invest wait untill the Pool 
+                        ends. Once pool End Your profits will be automatically payout in your Crypto Wallet.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingFour">
+                    <button class="accordion-button collapsed fs--1" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                      4. What is Cryptrich Referral program?
+                    </button>
+                  </h2>
+                  <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <p class="text-dark">
+                        CRYPTRICH referral program offers you to refer n number of people. We're giving highest referral rewards in the history.
+                        You can Participate in referral Reward Program and get rewards automatically. 
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingFive">
+                    <button class="accordion-button collapsed fs--1" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                      5. What Cryptocurrencies can I Invest?
+                    </button>
+                  </h2>
+                  <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <p class="text-dark">
+                        Bitcoin, Ethereum, Litecoin and Tron.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingSix">
+                    <button class="accordion-button collapsed fs--1" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                      6. Minimum and Maximum investment?
+                    </button>
+                  </h2>
+                  <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <ul class="tex-dark">
+                        <li>BTC - (Minimum 0.00025BTC - Maximum 1.5BTC)</li>
+                        <li>ETH - (Minimum 0.0075ETH - Maximum 2.5ETH)</li>
+                        <li>LTC - (Minimum 0.045LTC - Maximum 2LTC)</li>
+                        <li>TRX - (Minimum 50TRX - Maximum 75000TRX)</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
 
@@ -585,6 +701,29 @@ And the next time they try even harder . Invest today to succeed tomorrow.
           </div>
         </div>
       </section>
+
+      <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Cryptrich Regulations</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <ul>
+                <li>Don't Forget your User ID and Password.</li>
+                <li>Cryptrich is Fully Encrypted and Automatic platform.</li>
+                <li>Invest only when the Pool is Open.</li>
+                <li>Don't Invest in other fake website, Cryptrich official Domain cryptrich.live</li>
+                <li>Highly Risk-free.</li>
+              </ul>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
       <!-- <section> close ============================-->
       <!-- ============================================-->
 
@@ -608,11 +747,20 @@ And the next time they try even harder . Invest today to succeed tomorrow.
       });
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- <script>
+      $(document).ready(function(){
+        setTimeout(function(){
+           $('#myModal').modal('show');
+       }, 2500);
+      });
+</script> -->
+
     <script src="/vendors/@popperjs/popper.min.js"></script>
     <script src="/vendors/bootstrap/bootstrap.min.js"></script>
     <script src="/vendors/is/is.min.js"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
     <script src="/js/theme.js"></script>
+    <script src="/js/count.js"></script>
 
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
   </body>
