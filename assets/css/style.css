@@ -257,7 +257,7 @@ background: linear-gradient(113deg, rgba(3,218,246,1) 0%, rgba(15,145,235,1) 50%
 
 #makers-hub{
     display: flex;
-    margin-top: 30px;
+    margin-top: 15px;
 }
 #makers-hub li{ 
     color: white;
