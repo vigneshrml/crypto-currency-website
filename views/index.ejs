@@ -278,22 +278,22 @@
               <p class="text-secondary">Allocations of funds</p>
                <% poll.forEach(function(poll){%>
                 <% if(poll.pool == "BITCOIN" && poll.plan == "FRONT"){%>
-             <div class="progress mb-3" style="height: 20px;background-color: transparent;border:none;" data-aos="fade-right" data-aos-delay="100">
+             <div class="progress mb-3" style="height: 20px;background-color: transparent;border:none;" data-aos="fade-right" data-aos-delay="100"><% if(poll.percent==0){%><p class="text-light mx-auto">0 %</p><% } %> 
                <div class="progress-bar bar-gray" role="progressbar" style="width: <%=poll.percent%>%;"  aria-valuenow="<%=poll.percent%>" aria-valuemin="0" aria-valuemax="100"><%=poll.percent%>%</div>
              <p class="ms-3 text-secondary"><img src="/img/bitcoin.PNG" class="img-fluid" width="20" alt=""></p>
             </div> <% } %>
             <% if(poll.pool == "ETHEREUM" && poll.plan == "FRONT"){%>
-              <div class="progress mb-3" style="height: 20px;background-color: transparent;border:none;" data-aos="fade-right" data-aos-delay="100">
+              <div class="progress mb-3" style="height: 20px;background-color: transparent;border:none;" data-aos="fade-right" data-aos-delay="100"><% if(poll.percent==0){%><p class="text-light mx-auto">0 %</p><% } %>
                 <div class="progress-bar bar-gray" role="progressbar" style="width: <%=poll.percent%>%;"  aria-valuenow="<%=poll.percent%>" aria-valuemin="0" aria-valuemax="100"><%=poll.percent%>%</div>
               <p class="ms-3 text-secondary"><img src="/img/ethwhite.png" class="img-fluid" width="10" alt=""></p>
              </div> <% } %>
                 <% if(poll.pool == "LITECOIN" && poll.plan == "FRONT"){%>
-             <div class="progress mb-3" style="height: 20px;background-color: transparent;border:none;" data-aos="fade-right" data-aos-delay="100">
+             <div class="progress mb-3" style="height: 20px;background-color: transparent;border:none;" data-aos="fade-right" data-aos-delay="100"><% if(poll.percent==0){%><p class="text-light mx-auto">0 %</p><% } %>
                <div class="progress-bar bar-gray" role="progressbar" style="width: <%=poll.percent%>%;"  aria-valuenow="<%=poll.percent%>" aria-valuemin="0" aria-valuemax="100"><%=poll.percent%>%</div>
              <p class="ms-3 text-secondary"><img src="/img/lix.PNG" class="img-fluid" width="20" alt=""></p>
             </div> <% } %>
                 <% if(poll.pool == "TRON" && poll.plan == "FRONT"){%>
-             <div class="progress mb-3" style="height: 20px;background-color: transparent;border:none;" data-aos="fade-right" data-aos-delay="100">
+             <div class="progress mb-3" style="height: 20px;background-color: transparent;border:none;" data-aos="fade-right" data-aos-delay="100"><% if(poll.percent==0){%><p class="text-light mx-auto">0 %</p><% } %>
                <div class="progress-bar bar-gray" role="progressbar" style="width: <%=poll.percent%>%;"  aria-valuenow="<%=poll.percent%>" aria-valuemin="0" aria-valuemax="100"><%=poll.percent%>%</div>
              <p class="ms-3 text-secondary"><img src="/img/tron.PNG" class="img-fluid" width="20" alt=""></p>
             </div> <% } %>
@@ -478,7 +478,8 @@
             <div class="circle text-center">200% <br> <p class="mt-0 fs--2">Plan C</p></div>
          </div>
           </div>
-          <div class="row h-100 justify-content-center" data-aos="zoom-in">
+          <div class="row h-100 justify-content-center">
+            <h2 class="gray-color text-center my-3">Pool Capacity</h2>
             <div class="col-6 col-md-3 pt-2 pe-1 px-md-2 px-lg-3" data-aos="zoom-in">
               <a href="/bitcoin" class="text-ins">
                 <div class="card" id="blue-box">

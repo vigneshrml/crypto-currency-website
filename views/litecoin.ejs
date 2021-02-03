@@ -67,7 +67,7 @@
                   </ul>
                   <% poll.forEach(function(poll){%>
                      <% if(poll.pool == "LITECOIN" && poll.plan == "A"){%>
-                  <div class="progress mb-3" style="height: 30px;">
+                  <div class="progress mb-3" style="height: 30px;"><% if(poll.percent==0){%><p class="mx-auto">0 %</p><% } %> 
                     <div class="progress-bar bar-gray" role="progressbar" style="width: <%=poll.percent%>%;"  aria-valuenow="<%=poll.percent%>" aria-valuemin="0" aria-valuemax="100"><%=poll.percent%>%</div>
                   </div> <% } %>
                     <% })  %>  
@@ -98,7 +98,7 @@
                   </ul>
                   <% poll.forEach(function(poll){%>
                     <% if(poll.pool == "LITECOIN" && poll.plan == "B"){%>
-                 <div class="progress mb-3" style="height: 30px;">
+                 <div class="progress mb-3" style="height: 30px;"><% if(poll.percent==0){%><p class="mx-auto">0 %</p><% } %> 
                    <div class="progress-bar bar-gray" role="progressbar" style="width: <%=poll.percent%>%;"  aria-valuenow="<%=poll.percent%>" aria-valuemin="0" aria-valuemax="100"><%=poll.percent%>%</div>
                  </div> <% } %>
                    <% })  %> 
@@ -129,7 +129,7 @@
                   </ul>
                   <% poll.forEach(function(poll){%>
                     <% if(poll.pool == "LITECOIN" && poll.plan == "C"){%>
-                 <div class="progress mb-3" style="height: 30px;">
+                 <div class="progress mb-3" style="height: 30px;"><% if(poll.percent==0){%><p class="mx-auto">0 %</p><% } %> 
                    <div class="progress-bar bar-gray" role="progressbar" style="width: <%=poll.percent%>%;"  aria-valuenow="<%=poll.percent%>" aria-valuemin="0" aria-valuemax="100"><%=poll.percent%>%</div>
                  </div> <% } %>
                    <% })  %> 

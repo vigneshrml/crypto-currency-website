@@ -58,7 +58,7 @@
                         <h5>POOL "A" - 120% Return</h5>
                       </div>
                   <ul class="list-unstyled">
-                    <li class="mb-1 bd"><i class="fas fa-check-circle"></i>MIN:<span class="dollar">50 <small>Trx</small></span>
+                    <li class="mb-1 bd"><i class="fas fa-check-circle"></i>MIN:<span class="dollar">20 <small>Trx</small></span>
                     </li>
                     <li class="mb-1 bd"><i class="fas fa-check-circle"></i>MAX:<span class="dollar">15000 <small>Trx</small></span>
                     </li>
@@ -67,7 +67,7 @@
                   </ul>
                   <% poll.forEach(function(poll){%>
                      <% if(poll.pool == "TRON" && poll.plan == "A"){%>
-                  <div class="progress mb-3" style="height: 30px;">
+                  <div class="progress mb-3" style="height: 30px;"><% if(poll.percent==0){%><p class="mx-auto">0 %</p><% } %> 
                     <div class="progress-bar bar-gray" role="progressbar" style="width: <%=poll.percent%>%;"  aria-valuenow="<%=poll.percent%>" aria-valuemin="0" aria-valuemax="100"><%=poll.percent%>%</div>
                   </div> <% } %>
                     <% })  %>  
@@ -89,7 +89,7 @@
                     <h5>POOL "B" - 150% Return</h5>
                   </div>
                   <ul class="list-unstyled">
-                    <li class="mb-1 bd"><i class="fas fa-check-circle"></i>MIN:<span class="dollar">100 <small>Trx</small></span>
+                    <li class="mb-1 bd"><i class="fas fa-check-circle"></i>MIN:<span class="dollar">50 <small>Trx</small></span>
                     </li>
                     <li class="mb-1 bd"><i class="fas fa-check-circle"></i>MAX:<span class="dollar">40000 <small>Trx</small></span>
                     </li>
@@ -98,7 +98,7 @@
                   </ul>
                   <% poll.forEach(function(poll){%>
                     <% if(poll.pool == "TRON" && poll.plan == "B"){%>
-                 <div class="progress mb-3" style="height: 30px;">
+                 <div class="progress mb-3" style="height: 30px;"><% if(poll.percent==0){%><p class="mx-auto">0 %</p><% } %> 
                    <div class="progress-bar bar-gray" role="progressbar" style="width: <%=poll.percent%>%;"  aria-valuenow="<%=poll.percent%>" aria-valuemin="0" aria-valuemax="100"><%=poll.percent%>%</div>
                  </div> <% } %>
                    <% })  %> 
@@ -120,7 +120,7 @@
                         <h5>POOL "C" - 200% Return</h5>
                       </div>
                   <ul class="list-unstyled">
-                    <li class="mb-1 bd"><i class="fas fa-check-circle"></i>MIN:<span class="dollar">200 <small>Trx</small></span>
+                    <li class="mb-1 bd"><i class="fas fa-check-circle"></i>MIN:<span class="dollar">60 <small>Trx</small></span>
                     </li>
                     <li class="mb-1 bd"><i class="fas fa-check-circle"></i>MAX:<span class="dollar">75000 <small>Trx</small></span>
                     </li>
@@ -130,6 +130,7 @@
                   <% poll.forEach(function(poll){%>
                     <% if(poll.pool == "TRON" && poll.plan == "C"){%>
                  <div class="progress mb-3" style="height: 30px;">
+                  <% if(poll.percent==0){%><p class="mx-auto">0 %</p><% } %> 
                    <div class="progress-bar bar-gray" role="progressbar" style="width: <%=poll.percent%>%;"  aria-valuenow="<%=poll.percent%>" aria-valuemin="0" aria-valuemax="100"><%=poll.percent%>%</div>
                  </div> <% } %>
                    <% })  %> 
