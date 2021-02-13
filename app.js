@@ -18,7 +18,7 @@ var port = process.env.PORT || 9900;
     app.use(methodOverride("_method"));
 
 
-     mongoose.connect("mongodb+srv://cryptrich21:cryptrich21@cryptrich.q9h6r.mongodb.net/cryptrich?retryWrites=true&w=majority",{
+     mongoose.connect("mongodb://localhost:27017/cryptrich-opensource",{
         useNewUrlParser :true,
         useCreateIndex  :true,
         useUnifiedTopology: true
